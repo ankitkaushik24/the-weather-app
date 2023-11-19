@@ -1,0 +1,37 @@
+:host {
+  display: block;
+}
+
+.tabs-container {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  max-width: 100vw;
+  overflow: auto;
+}
+
+.tab-header {
+  background: var(--tab-primary-color, #337ab7);
+  color: var(--tab-primary-contrast, #fff);
+  padding: 4px 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  user-select: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.close-tab-btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.active-tab {
+  filter: drop-shadow(2px 4px 6px black);
+}

@@ -1,0 +1,18 @@
+<ul class="tabs-container">
+  <li
+    *ngFor="let tab of tabs"
+    (click)="selectTab(tab)"
+    class="tab-header"
+    [class.active-tab]="tab.isActive"
+  >
+    <h4>{{ tab.label }}</h4>
+    <button
+      *ngIf="removable"
+      class="close-tab-btn"
+      (click)="$event.stopPropagation(); removeTab(tab)"
+    >
+      &times;
+    </button>
+  </li>
+</ul>
+<ng-content select="app-tab"></ng-content>
